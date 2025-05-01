@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/servlet/ex03")
-public class EX03Controller extends HttpServlet{
+public class Ex03Controller extends HttpServlet{
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		// 이름과 생년월일을 전달받고,
