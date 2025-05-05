@@ -26,9 +26,9 @@ public class Test03URLmapping_annontation1 extends HttpServlet {
 
 		String dateTimeString = formatter.format(now);
 
-		out.println(dateTimeString);
+		out.println(dateTimeString); // 현 시각 출력 
 		
-		out.println(""
+		out.println(""				// 뉴스 기사 html 로 출력
 				+ "<html>\n"
 				+ "		<head><title>뉴스기사출력</title></head>\n"
 				+ "		<body>\n"

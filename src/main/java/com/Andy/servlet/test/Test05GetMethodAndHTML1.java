@@ -19,8 +19,7 @@ public class Test05GetMethodAndHTML1 extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		
-		String number = request.getParameter("number");
-		int numberInt = Integer.parseInt(number);
+		int numberInt = Integer.parseInt(request.getParameter("number"));
 		
 		out.println(""
 				+ "<html>\n"

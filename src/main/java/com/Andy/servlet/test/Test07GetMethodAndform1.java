@@ -21,6 +21,7 @@ public class Test07GetMethodAndform1 extends HttpServlet{
 			String address = request.getParameter("address");
 			String card = request.getParameter("card");
 			String price = request.getParameter("price");
+			
 			int priceInfo = Integer.parseInt(price);
 			
 			out.println(""

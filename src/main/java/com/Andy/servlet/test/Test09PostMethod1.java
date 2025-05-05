@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 public class Test09PostMethod1 extends HttpServlet {
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
 		response.setContentType("text/html");
+		
 		PrintWriter out = response.getWriter();
 
 		String name = request.getParameter("name");

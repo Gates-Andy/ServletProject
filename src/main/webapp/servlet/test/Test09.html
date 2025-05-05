@@ -15,8 +15,13 @@
 			<h2>입사 지원</h2>
 			<label>이름</label>
 			<input type="text" class="form-control col-3" name="name"> 
+			
 			<label>자기소개서</label>
 			<textarea rows="10" class="form-control" name="self"></textarea>
+			<!-- name 속성이 없을 때의 결과 서버에서 해당 데이터 추출 불가
+			예를 들어, name="name"을 지정하지 않으면, 서버는 request.getParameter("name")으로 값을 가져올 수 없습니다.
+			즉, 서버가 이 값을 찾을 수 없어서 null이나 빈 값이 반환됩니다. -->
+			
 			<button type="submit" class ="btn btn-primary mt-3">지원</button>
 		</form>
 	</div>

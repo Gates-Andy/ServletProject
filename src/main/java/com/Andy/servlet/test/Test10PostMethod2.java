@@ -15,7 +15,9 @@ public class Test10PostMethod2 extends HttpServlet {
 
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
 		response.setContentType("text/html");
+		
 		PrintWriter out = response.getWriter();
 
 		String id = request.getParameter("id");

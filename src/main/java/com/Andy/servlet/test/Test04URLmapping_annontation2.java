@@ -22,7 +22,7 @@ public class Test04URLmapping_annontation2 extends HttpServlet {
 				+ "<html>\n"
 				+ "		<head><title>리스트 출력</title></head>\n"
 				+ "		<body>\n"
-				+ "			<ul>\n"); // 끊어주기
+				+ "			<ul>\n"); // 끊어주기 for 문을 사용하기 위하여
 		
 		for (int i = 1; i <= 30; i++) {
 			out.println("<li>" + i + "번째 리스트</li>\n");

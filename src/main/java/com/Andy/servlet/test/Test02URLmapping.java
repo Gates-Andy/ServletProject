@@ -17,11 +17,13 @@ public class Test02URLmapping extends HttpServlet {
 		response.setContentType("text/plain");
 
 		PrintWriter out = response.getWriter();
-		Date now = new Date();
-//		out.println(now);
-
+		
+		Date now = new Date(); // out.println(now); Fri Apr 25 17:31:07 KST 2025
+		
 		SimpleDateFormat formatter = new SimpleDateFormat("현재 시간은 HH시 mm분 ss초 입니다.");
+		
 		String dateTimeString = formatter.format(now);
+		
 		out.println(dateTimeString);
 	}
 }

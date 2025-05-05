@@ -18,7 +18,7 @@ public class Ex03Controller extends HttpServlet{
 		// 데이터만 필요하면 이름과 나이만을 정보만 전달
 		response.setCharacterEncoding("utf-8");
 //		response.setContentType("text/html");
-		response.setContentType("application/json");
+		response.setContentType("application/json"); // JSON 형식으로 응답 출력
 		
 		PrintWriter out = response.getWriter();
 		
@@ -27,8 +27,8 @@ public class Ex03Controller extends HttpServlet{
 		// request 에서 birthday 이라는 이름으로 20041211 형식으로 값을 꺼내 쓸거니 채우세요.
 		// 기능을 만드는쪽에서 사용법을 정한다
 		
-		// http://localhost:8080/servlet/ex03?name=%EC%8B%A0%EC%9C%A4%EC%8B%9D&birthday=19950809 해야하는데 원래는
-		// webapp에다가 html 파일을 만들어 놓으면 클라이언트가 접근 할 수 있다. 폴더 만들기 html파일 만들기
+		// http://localhost:8080/servlet/ex03?name=신윤식&birthday=19950809 해야하는데 원래는
+		// webapp-servlet에 html 파일을 만들어 놓으면 클라이언트가 접근 할 수 있다. 폴더(servlet) 만들기 html파일 만들기
 		
 		String name = request.getParameter("name");
 		String birthday = request.getParameter("birthday");

@@ -18,11 +18,9 @@ public class Test06GetMethodAndHTML2 extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		
-		String number1String = request.getParameter("number1"); // request는 문자열을 기본으로
-		String number2String = request.getParameter("number2");
-		
-		int number1 = Integer.parseInt(number1String);
-		int number2 = Integer.parseInt(number2String);
+		// request는 문자열을 기본으로 하기에 바꿔줘야함 Integer.parseInt
+		int number1 = Integer.parseInt(request.getParameter("number1"));
+		int number2 = Integer.parseInt(request.getParameter("number2"));
 		
 		int plus = number1 + number2;
 		int minus = number1 - number2;

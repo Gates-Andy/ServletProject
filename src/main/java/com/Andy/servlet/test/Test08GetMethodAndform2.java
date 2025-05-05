@@ -18,7 +18,9 @@ public class Test08GetMethodAndform2 extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html");
+		
 		PrintWriter out = response.getWriter();
+		
 		String keyword = request.getParameter("keyword");
 
 		List<String> list = new ArrayList<>(Arrays.asList("강남역 최고 맛집 소개 합니다.", "오늘 기분 좋은 일이 있었네요.",
