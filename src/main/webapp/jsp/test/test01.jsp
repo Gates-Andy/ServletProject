@@ -2,16 +2,18 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="java.util.List"%>
 <%@ page import="java.util.Arrays"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>연습문제 1번</title>
 </head>
 <body>
+
 	<h3>1. 점수들의 평균 구하기</h3>
 	<%
-	int[] scores = { 80, 90, 100, 95, 80 };
+	int[] scores = {80,90,100,95,80};
 	int sum = 0;
 	for (int i = 0; i < scores.length; i++) {
 		sum += scores[i];
@@ -34,18 +36,19 @@
 	%>
 
 	<%= score %>
+	
 	<h3>3. 1부터 n 까지의 합계를 구하는 함수</h3>
 	<%!
-		public int sumAll(int number){
-		int sum = 0;
-		for(int i = 1; i <= number; i++){
-			sum+=i;
-		}
+		public int total(int number){
+			int sum = 0;
+			for(int i = 1; i <= number; i++){
+				sum+=i;
+			}
 		return sum;
 	}
 	%>
 
-	<%= sumAll(50) %>
+	<%= total(50) %>
 
 	<h3>4. 나이 구하기</h3>
 	<%
@@ -55,7 +58,7 @@
 		
 		int age = 2025 - year + 1;
 	%>
-	
+
 	<%= age %>
 </body>
 </html>

@@ -15,7 +15,7 @@
 	<%
 	int height = Integer.parseInt(request.getParameter("height"));
 	int weight = Integer.parseInt(request.getParameter("weight"));
-
+	
 	double bmi = weight / ((height / 100.0) * (height / 100.0));
 	
 	String result = null;
@@ -30,13 +30,11 @@
 		result = "비만";
 	}
 	%>
-
+	
 	<div class="container">
 		<h2>BMI 측정 결과</h2>
 		<div class="display-4">당신은<span class="text-info"><%= result %></span>입니다.</div><br>
 		<div> BMI 수치 :<%=bmi%></div>
 	</div>
-
-
 </body>
 </html>

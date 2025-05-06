@@ -17,6 +17,7 @@
 	<div class="container">
 		<%
 		Date now = new Date();
+		
 		SimpleDateFormat dateFormatter = new SimpleDateFormat("오늘 날짜 yyyy년 M월 dd일");
 		SimpleDateFormat timeFormatter = new SimpleDateFormat("현재 시간 HH시 mm분 ss초");
 		
@@ -30,12 +31,12 @@
 		String what = request.getParameter("what");
 		
 		String result = null;
+		
 		if(what.equals("time")){
 			result = timeString;
 		} else {
 			result = dateString;
 		}
-		
 		%>
 
 		<div class="display-4"><%= result%></div>
