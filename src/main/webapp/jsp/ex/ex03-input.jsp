@@ -7,7 +7,7 @@
 <title>Post input</title>
 </head>
 <body>
-	<form method="post" action="/jsp/ex/ex03.jsp">
+	<form method="post" action="/jsp/ex/ex03.jsp"> <!-- post 메소드 사용인데 인터넷 검사에는 왜 get으로 나오는가 -->
 		<label>닉네임 : </label> <input type="text" name="nickname"> <br>
 
 		<h4>좋아 하는 동물을 고르세요</h4>
@@ -24,11 +24,15 @@
 		<select name="fruit">
 			<option value="banana">바나나</option>
 			<option value="strawberry">딸기</option>
-			<option >복숭아</option>
+			<option value="peach">복숭아</option>
 		</select> <br>
-
-
-
+		
+		<h4>좋아 하는 음식을 "모두" 고르세요</h4>
+		<br>
+		<label>민트초코<input type="checkbox" name="food" value="mintchoco"></label>
+		<label>번데기<input type="checkbox" name="food" value="earth-worm"></label>
+		<label>하와이안피자<input type="checkbox" name="food" value="HawaianPizza"></label>
+		
 		<button type="submit">입력</button>
 	</form>
 </body>
