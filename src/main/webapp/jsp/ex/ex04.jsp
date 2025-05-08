@@ -65,16 +65,13 @@
 			</tr>
 		</thead>
 		<tbody>
+			<% for(Map<String, Integer> score:scoreList) { %>
 			<tr>
-				<td>30</td>
-				<td>15</td>
-				<td>12</td>
+				<td><%= score.get("국어") %></td>
+				<td><%= score.get("수학") %></td>
+				<td><%= score.get("영어") %></td>
 			</tr>
-			<tr>
-				<td>12</td>
-				<td>16</td>
-				<td>17</td>
-			</tr>
+			<% } %>
 		</tbody>
 	</table>
 </body>
