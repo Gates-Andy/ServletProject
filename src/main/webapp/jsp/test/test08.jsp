@@ -63,8 +63,8 @@
 	};
 	list.add(map);
 	%>
-	
-	
+ 
+
 	<h1 class="text-center">책 목록</h1>
 	<table class="table text-center">
 		<thead>
@@ -77,14 +77,14 @@
 		<tbody>
 			<%for(Map<String, Object> books:list){%>
 			<tr>
-				<td ><%=books.get("id")%></td>
+				<td><%=books.get("id")%></td>
 				<td><img src=<%=books.get("image")%> alt="책사진" height="75"></td>
-				<td class="text-primary fs-2 "> <a text-decoration: none href=<%=books.get("title")%>><%=books.get("title")%></a></td>
+				<td class="text-primary fs-2"><a href="/jsp/test/test08-input.jsp" style="text-decoration: none;"><%= books.get("title") %></a></td>
 			</tr>
 			<%} %>
 		</tbody>
 	</table>
-	
-	
+
+
 </body>
 </html>
