@@ -187,7 +187,8 @@
 				<tbody class="fw-bold">
 					<%
 					for (Map<String, String> channel : list) {
-						if(channel.get("category").equals(target)){
+						String category = channel.get("category");
+						if(target == null || channel.get("category").equals(target)){
 							
 					%>
 
