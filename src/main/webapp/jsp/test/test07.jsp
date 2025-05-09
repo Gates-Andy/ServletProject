@@ -12,8 +12,7 @@
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
 	rel="stylesheet"
-	integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-	crossorigin="anonymous">
+>
 </head>
 
 <body>
@@ -110,6 +109,7 @@
 				if (menu.equals(target)) {
 					// 체크박스가 체크되어 있고 point가 4.0 이하인 경우 건너뜀
 					if (excludeLowRating && point <= 4.0) {
+				  //if(menu.equals(target) && (filter == null || point >= 4.0))
 				continue;
 					}
 			%>

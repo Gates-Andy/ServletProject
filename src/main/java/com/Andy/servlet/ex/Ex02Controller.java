@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/servlet/ex02") // 정해진이름은 없음 지정하고 싶은 path
 public class Ex02Controller extends HttpServlet {
-
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 

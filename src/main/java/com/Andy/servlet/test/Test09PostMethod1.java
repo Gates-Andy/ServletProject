@@ -10,11 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/servlet/test09")
 public class Test09PostMethod1 extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		
+
 		response.setContentType("text/html");
-		
+
 		PrintWriter out = response.getWriter();
 
 		String name = request.getParameter("name");
@@ -22,7 +25,8 @@ public class Test09PostMethod1 extends HttpServlet {
 
 		out.println("" + "<html>\n" + "<head><title>입사 지원</title></head>\n" + "<body>\n");
 
-		out.println("" + name + "님 지원이 완료 되었습니다.\n" + "<hr>\n" + "<h5>" + "지원 내용" + "</h5>\n" + "<h5>" + self + "</h5>\n");
+		out.println(
+				"" + name + "님 지원이 완료 되었습니다.\n" + "<hr>\n" + "<h5>" + "지원 내용" + "</h5>\n" + "<h5>" + self + "</h5>\n");
 
 		out.println("</body>\n" + "</html>\n");
 	}

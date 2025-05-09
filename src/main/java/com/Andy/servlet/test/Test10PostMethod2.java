@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/servlet/test10")
 public class Test10PostMethod2 extends HttpServlet {
-
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
@@ -37,11 +39,20 @@ public class Test10PostMethod2 extends HttpServlet {
 	}
 
 	// doPost 메소드 바깥쪽에 위치
-	private final Map<String, String> userMap = new HashMap<String, String>() {
-		{
-			put("id", "hagulu");
-			put("password", "asdf");
-			put("name", "김인규");
-		}
-	};
+//	private final Map<String, String> userMap = new HashMap<String, String>() {
+//		{
+//			put("id", "hagulu");
+//			put("password", "asdf");
+//			put("name", "김인규");
+//		}
+//	};
+	private final Map<String, String> userMap = createUserMap();
+
+	private Map<String, String> createUserMap() {
+	    Map<String, String> map = new HashMap<>();
+	    map.put("id", "AndyGates");
+	    map.put("password", "qwer");
+	    map.put("name", "신윤식");
+	    return map;
+	}
 }

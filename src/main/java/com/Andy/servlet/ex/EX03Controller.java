@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/servlet/ex03")
 public class Ex03Controller extends HttpServlet{
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		// 이름과 생년월일을 전달받고,

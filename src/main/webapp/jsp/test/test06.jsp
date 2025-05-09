@@ -9,9 +9,7 @@
 <title>자바 제어문 사용하기 1</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-	crossorigin="anonymous">
+	rel="stylesheet">
 </head>
 <body>
 	<%
@@ -21,25 +19,25 @@
 	%>
 
 	<h2 class="text-center">장 목록</h2>
-	
+
 	<table class="table text-center">
-	
+
 		<thead>
 			<tr>
 				<th>번호</th>
 				<th>품목</th>
 			</tr>
 		</thead>
-		
+
 		<tbody>
 			<% for(int i = 0; i < goodsList.size(); i++){%>
 			<tr>
 				<td><%= i + 1%></td>
 				<td><%= goodsList.get(i)%></td>
 			</tr>
-			<%}%>	
+			<%}%>
 		</tbody>
-		
+
 	</table>
 
 </body>

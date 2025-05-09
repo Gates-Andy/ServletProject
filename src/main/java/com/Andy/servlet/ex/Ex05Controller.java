@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/servlet/ex05")
 public class Ex05Controller extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+	
 	// 파라미터가 보안에 민감한 데이터가 포함되어있는지 긴데이터가 포함되어있는지
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {

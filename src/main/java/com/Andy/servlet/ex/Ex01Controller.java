@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class Ex01Controller extends HttpServlet {
-
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Override // 응답을 만들기 위한 response 객체를 먼저 만들자
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 

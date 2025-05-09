@@ -9,29 +9,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/servlet/test05")
-
 public class Test05GetMethodAndHTML1 extends HttpServlet {
-	
+
+	private static final long serialVersionUID = 1L;
+
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setCharacterEncoding("utf-8");
 		response.setContentType("text/html");
-		
+
 		PrintWriter out = response.getWriter();
-		
+
 		int numberInt = Integer.parseInt(request.getParameter("number"));
-		
-		out.println(""
-				+ "<html>\n"
-				+ "	<head><title>구구단 링크</title></head>\n"
-				+ "	<body>\n");
-		
-					for(int i = 1; i <=9 ; i++) {
-						out.println("<li>" + numberInt + " X " + i + " = " + numberInt * i + "</li>\n" );
-					}
-					
-		out.println(""		
-				+ "	</body>\n"
-				+ "</html>\n");
+
+		out.println("" + "<html>\n" + "	<head><title>구구단 링크</title></head>\n" + "	<body>\n");
+
+		for (int i = 1; i <= 9; i++) {
+			out.println("<li>" + numberInt + " X " + i + " = " + numberInt * i + "</li>\n");
+		}
+
+		out.println("" + "	</body>\n" + "</html>\n");
 	}
 }

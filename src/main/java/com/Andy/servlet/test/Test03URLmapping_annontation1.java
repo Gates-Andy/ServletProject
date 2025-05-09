@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/servlet/test03")
 public class Test03URLmapping_annontation1 extends HttpServlet {
 
+	private static final long serialVersionUID = 1L;
+	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		response.setCharacterEncoding("utf-8");
