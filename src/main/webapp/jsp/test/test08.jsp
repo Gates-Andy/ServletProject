@@ -11,8 +11,7 @@
 <title>자바 제어문 사용하기 3</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-	rel="stylesheet"
->
+	rel="stylesheet">
 </head>
 <body>
 	<%
@@ -62,7 +61,7 @@
 	};
 	list.add(map);
 	%>
- 
+
 
 	<h1 class="text-center">책 목록</h1>
 	<table class="table text-center">
@@ -74,13 +73,19 @@
 			</tr>
 		</thead>
 		<tbody>
-			<%for(Map<String, Object> books:list){%>
+			<%
+			for (Map<String, Object> books : list) {
+			%>
 			<tr>
 				<td><%=books.get("id")%></td>
 				<td><img src=<%=books.get("image")%> alt="책사진" height="75"></td>
-				<td class="text-primary fs-2"><a href="/jsp/test/test08-input.jsp" style="text-decoration: none;"><%= books.get("title") %></a></td>
+				<td class="text-primary fs-2"><a
+					href="/jsp/test/test08-input.jsp?id=<%=books.get("id")%>"
+					style="text-decoration: none;"><%=books.get("title")%></a></td>
 			</tr>
-			<%} %>
+			<%
+			}
+			%>
 		</tbody>
 	</table>
 
