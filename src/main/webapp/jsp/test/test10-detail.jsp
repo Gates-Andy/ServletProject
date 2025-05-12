@@ -3,15 +3,13 @@
 <%@ page import="java.util.*"%>
 <!DOCTYPE html>
 <html>
-
 <head>
 <meta charset="UTF-8">
-<title>IU</title>
+<title>상세화면</title>
 <link rel="stylesheet"
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="style10.css">
+<link rel="stylesheet" href="style10-detail.css">
 </head>
-
 <body>
 	<%
 	// 아티스트 정보 
@@ -90,6 +88,8 @@
 	musicInfo.put("composer", "아이유,이종훈,이채규");
 	musicInfo.put("lyricist", "아이유");
 	musicList.add(musicInfo);
+
+	int id = Integer.parseInt(request.getParameter("id"));
 	%>
 
 	<div id="wrap">
@@ -112,48 +112,45 @@
 					class="nav-link text-dark">뮤직어워드</a></li>
 			</ul>
 		</nav>
+
 		<main>
+
 			<section class="d-flex section1 border border-success p-3 rounded">
-				<img src="<%=artistInfo.get("photo")%>" alt="IU 프로필 사진">
-				<div class="form-control artist data">
-					<h3 class="fw-bold"><%=artistInfo.get("name")%></h3>
-					<h4><%=artistInfo.get("debut")%>
-						데뷔
-					</h4>
-					<h4><%=artistInfo.get("agency")%></h4>
+				<%
+				for (Map<String, Object> songInfo : musicList) {
+					int songId = (Integer) songInfo.get("id");
+					if (songId == id) {
+				%>
+				<img src="<%=songInfo.get("thumbnail")%>" alt="썸네일" width="300">
+
+				<div class="song data ms-5">
+					<h3 class="fw-bold"><%=songInfo.get("title")%></h3>
+					<h4 class="mb-3"><%=songInfo.get("singer")%></h4>
+					<h4 class="mb-3">
+						앨범
+						<%=songInfo.get("album")%></h4>
+					<h4 class="mb-3">
+						재생시간
+						<%=songInfo.get("time")%></h4>
+					<h4 class="mb-3">
+						작곡가
+						<%=songInfo.get("composer")%></h4>
+					<h4 class="mb-3">
+						작사가
+						<%=songInfo.get("lyricist")%></h4>
 				</div>
+
+				<%
+				}
+				}
+				%>
 			</section>
-			<section class="section2">
-				<h2>곡 목록</h2>
-				<table class="table text-center">
-					<thead>
-						<tr>
-							<td class="fw-bold">no</td>
-							<td class="fw-bold">제목</td>
-							<td class="fw-bold">앨범</td>
-						</tr>
-					</thead>
-					<tbody>
 
-						<%
-						for (Map<String, Object> list : musicList) {
-						%>
-						<tr>
-							<td><%=list.get("id")%></td>
-							<td class="text-info">
-							<a href="http://localhost:8080/jsp/test/test10-detail.jsp?id=<%= list.get("id") %>">
-							<%=list.get("title")%>
-							</a>
-							</td>
-							<td><%=list.get("album")%></td>
-						</tr>
-
-						<%
-						}
-						%>
-
-					</tbody>
-				</table>
+			<section class="section2 mt-5">
+				<h2>가사</h2>
+				<hr>
+				<h3>가사 정보 없음</h3>
+				<hr>
 
 			</section>
 		</main>
