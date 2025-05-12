@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  height: 100px;
+}
+
+nav {
+  height: 50px;
+}
+
+.section1 {
+  height: 200px;
+}
+
+.section2 {
+  height: 400px;
+}
+
+footer {
+  height: 100px;
+}
+
