@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebFilter;
 	// 해당 필터를 거쳐갈 서블릿에 대한 url path 패턴 적용
 	// servlet 으로 시작 하는 모든 서블릿 @WebFilter("/servlet/*")
 
-@WebFilter("/*") // 모든 서블릿에 대한 필터
+@WebFilter("/*") // 모든 요청에 대해 필터 작동 이 필터는 모든 URL 경로에 적용됩니다.
 public class EncodingFilter implements Filter {
 
 		@Override
@@ -21,7 +21,7 @@ public class EncodingFilter implements Filter {
 			request.setCharacterEncoding("utf-8");
 			response.setCharacterEncoding("utf-8");
 			
-			chain.doFilter(request, response); // 예외처리가 왜 뒤에꺼만되는가 더 큰 느낌인가 질문하기
+			chain.doFilter(request, response); // 다음 서블릿으로 요청을 넘김
 			
 		}
 }

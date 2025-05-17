@@ -13,8 +13,8 @@ import java.util.Map;
 
 public class MysqlService {
 
-	// jsp 안에서 쓸 내용들을 module화 하기 위한 클래스 첫번째로 맴버 변수를 만들어 봅시다. 맴버변수 connection
-	private Connection connection;
+	
+	private Connection connection; // jsp 안에서 쓸 내용들을 module화 하기 위한 클래스 첫번째로 맴버 변수를 만들어 봅시다. 맴버변수 connection
 
 	// 클래스를 설게한 입장에서 해당 클래스의 객체가 두개이상 만들어지지 않도록 하나의 객체를 공유해서 사용하게 한다.
 
