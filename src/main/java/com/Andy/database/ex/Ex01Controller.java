@@ -19,9 +19,9 @@ public class Ex01Controller extends HttpServlet {
 		@Override
 		public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 			
-			// used_goods 테이블의 모든행을 조회해서 일부 데이터를 response에 담는다.
+			// used_goods 테이블의 모든 행을 조회해서 일부 데이터를 response에 담는다.
 			
-//			응답을 텍스트로 보내겠다는 설정이야. PrintWriter를 이용해서 사용자에게 결과를 보낼 수 있어.
+			// 응답을 텍스트로 보내겠다는 설정이야. PrintWriter를 이용해서 사용자에게 결과를 보낼 수 있어.
 			response.setContentType("text/plain");
 			PrintWriter out = response.getWriter();
 			

@@ -26,18 +26,18 @@ public class Test07GetMethodAndform1 extends HttpServlet {
 
 		int priceInfo = Integer.parseInt(price);
 
-		out.println("" + "		<html>\n" + "			<head><title>주문</title></head>\n" + "			<body>\n");
+		out.println("" + "<html>\n" + "<head><title>주문</title></head>\n" + "<body>\n");
 
 		if (!address.contains("서울시")) {
 			out.println("<h3>주문 불가 지역입니다.</h3>");
 		} else if (card.equals("신한카드")) {
 			out.println("<h3>결제 불가 카드 입니다.</h3>");
 		} else {
-			out.println("" + "			<h3>" + address + "로 배달 준비중" + "</h3>\n" + "			<hr>\n"
-					+ "			<h5>" + "결제금액 : " + priceInfo + "원" + "</h5>\n");
+			out.println("" + "<h3>" + address + "로 배달 준비중" + "</h3>\n" + "<hr>\n" + "<h5>" + "결제금액 : " + priceInfo + "원"
+					+ "</h5>\n");
 		}
 
-		out.println("" + "			</body>\n" + "		</html>\n");
+		out.println("" + " </body>\n" + "</html>\n");
 
 	}
 }

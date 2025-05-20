@@ -30,10 +30,10 @@ public class Test08GetMethodAndform2 extends HttpServlet {
 
 		out.println("" + "<html>\n" + "<head><title>맛집 검색</title></head>\n" + "<body>\n");
 
-		for (String text : list) {
-			if (text.contains(keyword)) {
-				String newText = text.replace(keyword, "<b>" + keyword + "</b>");
-				out.println("" + "<div>" + newText + "</div><hr>");
+		for (String text : list) { // 향상된 for 문 list 리스트에서 text라는 문자열을 리스트 안 문자열들을 반복 저장
+			if (text.contains(keyword)) { //파라미터로 받은 keyword라는 문자열을 text가 포함하는지 비교
+				String newText = text.replace(keyword, "<b>" + keyword + "</b>"); //replace로 볼드체로바꾼 놈을 newText로 저장하여 
+				out.println("" + "<div>" + newText + "</div><hr>"); 
 			}
 		}
 

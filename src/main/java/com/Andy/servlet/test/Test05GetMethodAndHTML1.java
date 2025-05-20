@@ -20,7 +20,7 @@ public class Test05GetMethodAndHTML1 extends HttpServlet {
 
 		PrintWriter out = response.getWriter();
 
-		int numberInt = Integer.parseInt(request.getParameter("number"));
+		int numberInt = Integer.parseInt(request.getParameter("number")); // webapp-servlet에 html 파일을 만들어 놓으면 클라이언트가 접근 할 수 있다. 폴더(servlet) 만들기 html파일 만들기 아래에 있음
 
 		out.println("" + "<html>\n" + "	<head><title>구구단 링크</title></head>\n" + "	<body>\n");
 

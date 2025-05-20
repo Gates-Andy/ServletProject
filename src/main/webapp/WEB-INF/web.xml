@@ -17,12 +17,12 @@
 		<url-pattern>/hello</url-pattern>
 	</servlet-mapping>
 
-	<servlet>
+	<servlet> <!-- 서블릿 이름과 클래스 경로를 등록 ✅ -->
 		<servlet-name>ex01</servlet-name>
 		<servlet-class>com.Andy.servlet.ex.Ex01Controller</servlet-class>
 	</servlet>
 
-	<servlet-mapping>
+	<servlet-mapping> <!-- URL 요청 경로와 위에서 등록한 서블릿 이름을 연결 ✅ -->
 		<servlet-name>ex01</servlet-name>
 		<url-pattern>/servlet/ex01</url-pattern>
 	</servlet-mapping>
@@ -46,6 +46,8 @@
 		<servlet-name>test02</servlet-name>
 		<url-pattern>/servlet/test02</url-pattern>
 	</servlet-mapping>
+<!-- 1.	com.Andy.servlet.ex.Ex01Controller 클래스는 HttpServlet을 상속하고 있어야 하며,
+	 2.	web.xml 안에 이 항목들이 <web-app> 태그 안에 있어야 해요.  -->
 
 
 </web-app>

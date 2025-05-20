@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/servlet/ex03")
-public class Ex03Controller extends HttpServlet{
+public class EX03Controller extends HttpServlet{
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -20,7 +20,7 @@ public class Ex03Controller extends HttpServlet{
 		
 		// 데이터만 필요하면 이름과 나이만을 정보만 전달
 		response.setCharacterEncoding("utf-8");
-//		response.setContentType("text/html");
+		// response.setContentType("text/html");
 		response.setContentType("application/json"); // JSON 형식으로 응답 출력
 		
 		PrintWriter out = response.getWriter();
@@ -31,7 +31,7 @@ public class Ex03Controller extends HttpServlet{
 		// 기능을 만드는쪽에서 사용법을 정한다
 		
 		// http://localhost:8080/servlet/ex03?name=신윤식&birthday=19950809 해야하는데 원래는
-		// webapp-servlet에 html 파일을 만들어 놓으면 클라이언트가 접근 할 수 있다. 폴더(servlet) 만들기 html파일 만들기
+		// webapp-servlet에 html 파일을 만들어 놓으면 클라이언트가 접근 할 수 있다. 폴더(servlet) 만들기 html파일 만들기 아래에 있음
 		
 		String name = request.getParameter("name");
 		String birthday = request.getParameter("birthday");
